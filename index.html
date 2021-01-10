@@ -1,0 +1,62 @@
+<html>
+
+<head>
+  <script type="text/javascript">
+    let col1 = [
+      'artless',
+      'bawdry',
+      'beslubbering',
+      'churlish',
+      'cockered',
+      'clouted',
+      'craven',
+      'currish',
+      'dankish',
+      'dissenbling',
+      'errant',
+      'fawning',
+      'fobbing',
+      'froward',
+      'frothy',
+      'gleeking',
+      'goatish',
+      'gorbellied',
+      'impertinent',
+      'infectious',
+      'jarring',
+      'loggerheaded',
+      
+    ]
+    let col2 = [
+      'base-court',
+      'bat-fowling',
+      'beef-witted',
+      'beetle-headed'
+    ]
+    let col3 = [
+      'apple-john',
+      'baggage',
+      'barnacle',
+      'bladder'
+    ]
+
+    function generateInsult() {
+      let rand1 = Math.floor(Math.random() * col1.length)
+      let rand2 = Math.floor(Math.random() * col2.length)
+      let rand3 = Math.floor(Math.random() * col3.length)
+
+      let insult = 'Thou ' + col1[rand1] + ' ' + col2[rand2] + ' ' + col3[rand3]
+
+      document.getElementById("myText").innerHTML = insult;
+    }
+  </script>
+
+</head>
+
+  <body onload="generateInsult()">
+
+    <h1><span id="myText"></span></h1>
+
+  </body>
+
+</html>
